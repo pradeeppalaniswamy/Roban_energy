@@ -1,0 +1,15 @@
+﻿@import 'bootstrap';
+.coverimage
+{
+   
+     @extend .jumbotron;
+    
+  background-image: url('pc1.JPG');
+  color:white;
+ 
+  min-height:400px;
+  margin-top:0px;
+  margin-bottom:8px;
+
+}
+.thumbnail img { min-height: 200px; }

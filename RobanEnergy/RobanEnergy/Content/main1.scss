@@ -1,0 +1,25 @@
+﻿.background {
+    //background: url('problem.png') repeat;
+    background-image: url('images/robanenergy_pic7.jpg');
+    background-size: 288px 200px;
+    background-repeat: no-repeat;
+ width:100%;
+  margin-bottom:8px;
+ min-height: 200px;
+ height: 50px;
+}
+
+.transbox {
+    margin-bottom:20px;
+  
+  min-height:150px;
+  background-color: #ffffff;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: white;
+}

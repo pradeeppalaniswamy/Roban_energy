@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="~/Content/Br.jpg" class="img-circle" height="30" width="30">
+                </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("ROBAN ENERGY", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Products", "products", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Projects <b class="caret"></b></a>
+                        <ul class="dropdown-menu" id="menu1">
+                            <li>@Html.ActionLink("Current projects", "currentprojects", "Home")</li>
+                            <li>@Html.ActionLink("Up Comming projects", "upcommingprojects", "Home")</li>
+                           
+                            <li class="divider"></li>
+                         
+                            <li>@Html.ActionLink("Project Tanzania", "Projecttanzania", "Home")</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Contact Us", "Create", "UserDetail")</li>
+                    
+
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
+  
+
+
+        <div class="container">
+
+            @RenderBody()
+            <hr />
+
+            <footer></footer>
+        </div>
+        <div class="footer">
+            <p><h2 class="text-muted"> &nbsp;&nbsp;&copy;&nbsp; @DateTime.Now.Year -Copyright © Roban Energy. All rights reserved</h2></p>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>
